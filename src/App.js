@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import React from 'react';
+import { Grommet, } from 'grommet';
+import Home from './components/Home'
+import { Route, Switch, } from 'react-router-dom';
 
-export default App;
+const App = () => (
+  <Grommet theme={theme} full>
+    <Home />
+  </Grommet>
+)
+
+const theme = {
+  global: {
+    colors: {
+      brand: '#228BE6',
+    },
+    font: {
+      family: 'Roboto',
+      size: '14px',
+      height: '20px',
+    },
+  },
+};
+
+
+export default App
